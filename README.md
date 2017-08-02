@@ -8,10 +8,10 @@ How to Use?
   `
   git clone https://github.com/sushantshekhar20/bot_api.ai.git
   `
-3. cd bot_api.ai
+3. `cd bot_api.ai`
 4. Place your Key in config/api.js
-5. npm install
-6. node bin/www
+5. `npm install`
+6. `node bin/www`
 
 UI Design by [BotUI](https://github.com/moinism/botui).
 NLP Used [API.AI](https://www.api.ai)
