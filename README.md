@@ -13,5 +13,7 @@ How to Use?
 5. `npm install`
 6. `node bin/www`
 
+  Edit the Chat Flow from public/javascripts/convo.js
+
 UI Design by [BotUI](https://github.com/moinism/botui).
-NLP Used [API.AI](https://www.api.ai)
+NLP Used [API.AI](https://www.api.ai).
