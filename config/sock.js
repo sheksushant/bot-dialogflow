@@ -2,6 +2,8 @@ var app = require('express')();
 var server = require('http').Server(app);
 var io = require('socket.io')(server);
 
+var api = require('./api');
+
 var conn = function() {
   server.listen(8010);
 
@@ -10,13 +12,15 @@ var conn = function() {
   });
 };
 
-var startsock = function() {
+var fromClient = function() {
 
 io.on('connection', function (socket) {
-//  socket.emit('news', { hello: 'world' });
   socket.on('fromClient', function (data) {
-    console.log(data);
+    console.log(data.client);
+         api.getRes('hello').then(function(res){
+            socket.emit('fromServer', { server: res });
+         });
   });
 });
 }
-module.exports = {startsock,conn}
+module.exports = {conn,fromClient}

@@ -6,8 +6,10 @@
     "start": "node ./bin/www"
   },
   "dependencies": {
+    "api.ai": "^1.0.3",
     "apiai": "^4.0.3",
     "body-parser": "~1.17.1",
+    "circular-json": "^0.3.3",
     "cookie-parser": "~1.4.3",
     "debug": "~2.6.3",
     "ejs": "~2.5.6",

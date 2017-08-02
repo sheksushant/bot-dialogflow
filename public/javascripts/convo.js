@@ -1,11 +1,6 @@
 var botui = new BotUI('api-bot');
 
 var socket = io.connect('http://localhost:8010');
-socket.on('fromServer', function (data) {
-  console.log(data);
-});
-
-
 
 
 botui.message.add({
@@ -20,7 +15,17 @@ botui.message.add({
     socket.emit('fromClient', { client : res.value });
       console.log(res.value); // will print whatever was typed in the field.
 
-    });
+    }).then(function () {
+
+      socket.on('fromServer', function (data) {
+        console.log(data.server);
+      botui.message.add({
+          content: data.server,
+          delay: 500,
+        });
+      });
+
+    })
   });
 
 
