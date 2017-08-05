@@ -1,7 +1,11 @@
 # bot_api.ai
 ### A BotUI app connected to API.AI.
 
-How to Use?
+#####How to Use?
+
+Build it from scratch using the [Tutorial](https://chatbotslife.com/custom-api-ai-chatbot-using-botui-58d673155c7d).
+
+OR...
 
 1. Go to [API.AI](https://www.api.ai) and get a key!
 2. Clone the Repo,
