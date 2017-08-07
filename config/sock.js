@@ -17,7 +17,7 @@ var fromClient = function() {
 io.on('connection', function (socket) {
   socket.on('fromClient', function (data) {
     console.log(data.client);
-         api.getRes('hello').then(function(res){
+         api.getRes(data.client).then(function(res){
             socket.emit('fromServer', { server: res });
          });
   });
