@@ -3,9 +3,12 @@
 
 ##### How to Use?
 
-Build it from scratch using the [Tutorial](https://chatbotslife.com/custom-api-ai-chatbot-using-botui-58d673155c7d).
+You can simply chose to
+Build it yourself from scratch using this [Tutorial](https://chatbotslife.com/custom-api-ai-chatbot-using-botui-58d673155c7d).
 
 OR...
+
+Follow these steps below
 
 1. Go to [API.AI](https://www.api.ai) and get a key!
 2. Clone the Repo,
