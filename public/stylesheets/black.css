@@ -32,6 +32,7 @@ iframe {
 .botui-actions-text-input {
   color: #FFFFFF;
   border-bottom: 1px solid #3498DB;
+  margin: 0;
 }
 
 .botui-actions-buttons-button {
