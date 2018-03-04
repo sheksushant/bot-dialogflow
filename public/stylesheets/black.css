@@ -40,3 +40,7 @@ iframe {
 .botui-message-content-link {
   color: #F1C40F;
 }
+
+.botui-messages-container {
+  padding: 30px 0px;
+}
