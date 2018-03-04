@@ -13,6 +13,8 @@ iframe {
 
 .botui-app-container {
   margin-top: 40px;
+  width: 410px;
+  height: 500px;
 }
 
 .botui-container {
