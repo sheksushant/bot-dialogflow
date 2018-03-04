@@ -13,6 +13,8 @@ iframe {
 
 .botui-app-container {
   margin-top: 40px;
+  width: 410px;
+  height: 500px;
 }
 
 .botui-container {
@@ -30,6 +32,7 @@ iframe {
 .botui-actions-text-input {
   color: #FFFFFF;
   border-bottom: 1px solid #3498DB;
+  margin: 0;
 }
 
 .botui-actions-buttons-button {
@@ -39,4 +42,8 @@ iframe {
 
 .botui-message-content-link {
   color: #F1C40F;
+}
+
+.botui-messages-container {
+  padding: 30px 0px;
 }
