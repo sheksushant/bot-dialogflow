@@ -4,7 +4,7 @@ var socket = io.connect('http://localhost:8010');
 // read the BotUI docs : https://docs.botui.org/
 
 botui.message.add({
-  content: 'Lets Start Talking...',
+  content: 'Hello! My name is TicketBot. I will ask you some questions to help solve the problem you are having. I can also write a ticket for you in case we cannot resolve your problem here.',
   delay: 1500,
 }).then(function () {
   botui.action.text({
@@ -17,6 +17,7 @@ botui.message.add({
   }).then(function () {
     socket.on('fromServer', function (data) { // recieveing a reply from server.
       console.log(data.server);
+      console.log(data);
       newMessage(data.server);
       addAction();
   })
@@ -26,14 +27,14 @@ botui.message.add({
 function newMessage (response) {
   botui.message.add({
     content: response,
-    delay: 0,
+    delay: 1500,
   })
 }
 
 function addAction () {
   botui.action.text({
     action: {
-      placeholder: 'enter response...', 
+      placeholder: 'enter response...',
     }
   }).then(function (res) {
     socket.emit('fromClient', { client : res.value });
