@@ -17,12 +17,49 @@ botui.message.add({
   }).then(function () {
     socket.on('fromServer', function (data) { // recieveing a reply from server.
       console.log(data.server);
-      console.log(data);
-      newMessage(data.server);
-      addAction();
+      // console.log(data.server.split(' '));
+      // let splitMessage = data.server.split(' ');
+      // console.log(splitMessage)
+      console.log(data.server)
+      if (data.server.includes('button')) {
+        newButton(data.server.split(',').slice(0,-1));
+      }
+      else {
+        newMessage(data.server);
+        addAction();
+      }
+      // addAction();
   })
 });
 })
+
+function newButton (response){
+  console.log(response);
+
+  let actions = [];
+  for (let i = 0; i < response.length; i++) {
+    actions.push({text: response[i], value: response[i]});
+  }
+
+
+  botui.action.button({ // let user do something
+    delay: 1000,
+    action: actions
+    // action: [
+    //   {
+    //     text: 'Good',
+    //     value: 'good'
+    //   },
+    //   {
+    //     text: 'Really Good',
+    //     value: 'really_good'
+    //   }
+    // ]
+  }).then(function (res) {
+    socket.emit('fromClient', { client : res.value });
+    console.log('client response: ', res.value);
+  })
+}
 
 function newMessage (response) {
   botui.message.add({
