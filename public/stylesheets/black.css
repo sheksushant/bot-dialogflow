@@ -4,7 +4,7 @@ html, body {
 }
 
 body {
-  background-color: #34495E;
+  background-color: white;
 }
 
 iframe {
@@ -13,12 +13,12 @@ iframe {
 
 .botui-app-container {
   margin-top: 40px;
-  width: 410px;
+  width: 700px;
   height: 500px;
 }
 
 .botui-container {
-  background-color: #34495E;
+  background-color: white;
 }
 .botui-message-content {
   color: #FFFFFF;
@@ -30,7 +30,7 @@ iframe {
 }
 
 .botui-actions-text-input {
-  color: #FFFFFF;
+  color: darkGrey;
   border-bottom: 1px solid #3498DB;
   margin: 0;
 }
